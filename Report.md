@@ -50,7 +50,7 @@ I tested a variety of hyperparameters, or tuning of the model, and learned inter
 The goal of classification is to accuractly predict the label of an observation based on the model. After testing the bast Lasso-regularized logistic regression and lasso-regularized SVM.
 
 **Confusion Matrix of Predictions on the GSE28497 dataset using Logistic Regression with Lasso regularization**
-![Confusion Matrix](images/score_confusion_matrix.jpg)
+![Confusion Matrix](images/score_confusion_matrix.JPG)
 
 ## 6. Conclusion and Next Steps
 -------------------------------------------------------------------------------------------------------------------------------
