@@ -20,13 +20,13 @@ The data available on public repositories are never the raw files coming off the
 #### Dataset GSE28497
 ##### **Histograms of 50 Randomly Sampled Genes**
 By looking at the histograms we can see that the data is mostly normalized and this is because the dataset provided was already preprocessed into a usable form.
-![50 Randomly Sampled Genes](sampledhist001.png)
+![50 Randomly Sampled Genes](images/sampledhist001.png)
 ##### **PCA Reduction with 2 and 3 components**
 PCA analysis is used to help visualize high dimensional data, in this case tens of thousands of features per observation. These graphs are color-coded according to cancer type and although it is unclear from the 2D scatterplot we can see stratification in the 3D plot.
-![PCA n=2](PCA_n_2.png) ![PCA n=3](PCA_n_3_003.png)
+![PCA n=2](images/PCA_n_2.png) ![PCA n=3](images/PCA_n_3_003.png)
 ##### **T-SNE Reduction**
 This type of analysis is similar to PCA in that it help with feature reduction. In this analysis we can see even clearer clusters. This may be an effective tool during modeling.
-![T_SNE](tsne002.png)
+![T_SNE](images/tsne002.png)
 
 ## 4. Modeling
 -------------------------------------------------------------------------------------------------------------------------------
@@ -43,14 +43,14 @@ I was able to obtain 100% accuracy on the binary dataset. The best score acheive
 I tested a variety of hyperparameters, or tuning of the model, and learned interesting things about the data. I first tested to see if the number of columns used for the model mattered. It turns out that by testing only 6000 of 22,000+ features I could acheive maximum results. This led to using a lasso regularized model which will zero out the weights of features, effectively removing them from the equation. This is opposed to ridge regularization which shares the weights among all features. From this we could also pull out important features to track. Those features could be used as biomarkers for tracking diagnosis or potentially as therapeutic markers.
 
 **Regularization types**
-![Regularization](lassoreg.png)
+![Regularization](images/lassoreg.png)
 
 ## 5. Predictions
 -------------------------------------------------------------------------------------------------------------------------------
 The goal of classification is to accuractly predict the label of an observation based on the model. After testing the bast Lasso-regularized logistic regression and lasso-regularized SVM.
 
 **Confusion Matrix of Predictions on the GSE28497 dataset using Logistic Regression with Lasso regularization**
-![Confusion Matrix](score_confusion_matrix.jpg)
+![Confusion Matrix](images/score_confusion_matrix.jpg)
 
 ## 6. Conclusion and Next Steps
 -------------------------------------------------------------------------------------------------------------------------------
